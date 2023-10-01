@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://dfg4m6cw1i7ww"]
+
+[ext_resource type="Texture2D" uid="uid://blokhu2pikfn6" path="res://assets/memory_data/Funeral.png" id="1_jlei6"]
+[ext_resource type="Script" path="res://src/game/MemoryData.gd" id="1_rw30t"]
+
+[resource]
+script = ExtResource("1_rw30t")
+memory_icon = ExtResource("1_jlei6")
+memory_name = "Memory of a Funeral"
+memory_description = "A memory of a funeral. It smells like unspoken words and lingering memories."
+final_memory = Array[String](["It's a memory of a funeral. It's for someone you loved deeply.", "This memory didn't decide to hold onto their name. Its absence burns a hollow hole in your chest.", "You miss them so deeply. You remember you couldn't afford a full scale funeral. You remember the emptiness in your pockets and hands.", "You wore your best attire for a solo performance in the back of a graveyard. It was just you.", "It was just you.", "The casket lowers, and with it descends the daylight.", "You are left with the feeling of old sunshine on a smiling cheeks. Phantom hands. Last laughs."])

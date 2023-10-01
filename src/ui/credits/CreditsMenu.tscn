@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://brnh4vmowotm5"]
+
+[ext_resource type="Script" path="res://src/ui/credits/CreditsMenu.gd" id="1_jt887"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7pupx"]
+font_size = 48
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.694118)
+shadow_offset = Vector2(3, 3)
+
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jt887")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 96
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 96
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "SFX made via Chiptone.
+
+Font is monogram by datagoblin (datagoblin.itch.io).
+
+Writing, pixel art, programming by aoiazure (aoiazure.itch.io).
+
+Thank you!"
+label_settings = SubResource("LabelSettings_7pupx")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 152.0
+offset_bottom = 32.0
+text = "<- Return to Main Menu"

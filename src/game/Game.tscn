@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqjgufhah5nml"]
+
+[ext_resource type="Script" path="res://src/game/Game.gd" id="1_st2d3"]
+[ext_resource type="PackedScene" uid="uid://by88ekyv2tfhh" path="res://src/ui/MainMenu.tscn" id="2_e283l"]
+[ext_resource type="Shader" path="res://src/game/Background.gdshader" id="2_ommjq"]
+[ext_resource type="Texture2D" uid="uid://jpeai8jnn324" path="res://assets/ui/background.png" id="3_urxba"]
+[ext_resource type="PackedScene" uid="uid://bjlwea63lr8s" path="res://src/ui/choices/ChoicesMenu.tscn" id="5_w1why"]
+[ext_resource type="PackedScene" uid="uid://brnh4vmowotm5" path="res://src/ui/credits/CreditsMenu.tscn" id="6_cm5hu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4qud4"]
+shader = ExtResource("2_ommjq")
+shader_parameter/scroll_direction = Vector2(1, 1)
+shader_parameter/scroll_speed = 0.1
+shader_parameter/zoom_amount = 0.25
+shader_parameter/scroll_texture = ExtResource("3_urxba")
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_st2d3")
+
+[node name="BG" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4qud4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" parent="." instance=ExtResource("2_e283l")]
+layout_mode = 1
+
+[node name="ChoicesMenu" parent="." instance=ExtResource("5_w1why")]
+visible = false
+layout_mode = 1
+
+[node name="CreditsMenu" parent="." instance=ExtResource("6_cm5hu")]
+visible = false
+layout_mode = 1

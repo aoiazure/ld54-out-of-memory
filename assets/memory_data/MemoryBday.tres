@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://g7bslhsrj3c8"]
+
+[ext_resource type="Texture2D" uid="uid://3pdeqaohr15n" path="res://assets/memory_data/Bday.png" id="1_b5fay"]
+[ext_resource type="Script" path="res://src/game/MemoryData.gd" id="1_chqby"]
+
+[resource]
+script = ExtResource("1_chqby")
+memory_icon = ExtResource("1_b5fay")
+memory_name = "Memory of a Birthday"
+memory_description = "A memory of an early birthday of yours. It smells bittersweet and like dry melon."
+final_memory = Array[String](["It's a memory of one of your early birthdays. Maybe you were seven, or so.", "You see your guardian - a middle-aged woman, smiles having left their mark on her face - slowly walk into the room.", "She has something in her hands.", "It's... not a cake. You feel your stomach drop in disappointment.", "Then in embarrassment for feeling that way.", "It's a fruit plate. You loved fruit. It was sweet and lovely to the tongue.", "Happy birthday, she told you. She didn't have to apologize, because it was already implied.", "You give her a hug. You don't think you ever accepted the apology. Not really, anyway.", "You take a fork and spear a piece of fruit. It's cold and a little dry from being in the fridge so long.", "But at least it's sweet."])

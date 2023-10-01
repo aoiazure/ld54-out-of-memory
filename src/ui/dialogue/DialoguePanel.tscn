@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://ev35medp218j"]
+
+[ext_resource type="Script" path="res://src/ui/dialogue/DialoguePanel.gd" id="1_ah0a1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivr10"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfcfl"]
+font_size = 32
+
+[node name="DialoguePanel" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+script = ExtResource("1_ah0a1")
+
+[node name="Margins" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Vertical" type="VBoxContainer" parent="Margins"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Speaker" type="Label" parent="Margins/Vertical"]
+visible = false
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Speaker"
+label_settings = SubResource("LabelSettings_ivr10")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="Margins/Vertical"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Dialogue" type="Label" parent="Margins/Vertical"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Game dialogue will go here."
+label_settings = SubResource("LabelSettings_bfcfl")
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+flat = true

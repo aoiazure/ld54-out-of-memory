@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://ct08rlk6nqv8r"]
+
+[ext_resource type="Texture2D" uid="uid://8y2ifw6v0gyx" path="res://assets/memory_data/Meeting.png" id="1_anwqe"]
+[ext_resource type="Script" path="res://src/game/MemoryData.gd" id="1_aporx"]
+
+[resource]
+script = ExtResource("1_aporx")
+memory_icon = ExtResource("1_anwqe")
+memory_name = "Memory of Meeting"
+memory_description = "A memory of a meeting. It smells like damp wind and a piano."
+final_memory = Array[String](["It's a memory of when you first met.", "Who did you meet? The memory does not remember, only the interactions and smiles exchanged.", "You met in a dreary spring eve. You can't remember who set you up together but suffice to say, you were nervous.", "A boulder in your stomach. You can barely speak, but the conversation is slow, and easy.", "You lighten up slowly. The smile you were forcing becomes natural.", "The rain patters loudly and the wind catches you in it and sweeps you into the sky.", "You're happy, you think. Maybe that's enough for now."])

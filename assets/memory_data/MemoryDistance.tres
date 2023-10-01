@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://ckrjghixiekxb"]
+
+[ext_resource type="Script" path="res://src/game/MemoryData.gd" id="1_oqdav"]
+[ext_resource type="Texture2D" uid="uid://brchk3w0gmp5u" path="res://assets/memory_data/Distance.png" id="1_t1vwk"]
+
+[resource]
+script = ExtResource("1_oqdav")
+memory_icon = ExtResource("1_t1vwk")
+memory_name = "Memory of Distance"
+memory_description = "A memory of lingering love. It smells like empty rooms and dust."
+final_memory = Array[String](["It's a memory of a day you come home to no one.", "It feels like you are a ghost in your own home. Maybe you are, already.", "You walk into an office where you should have greeted someone, hard at work. But they're not there.", "You sigh, mounting weight gathering on your shoulders. You walk past a finger painting you made as a child.", "Maybe this is for the best. A lesson to be learned and remembered.", "Love well, and love kindly, perhaps. Take naught for granted.", "Or perhaps this is instead a sign that says that you will remember this feeling forever.", "Only time will tell."])

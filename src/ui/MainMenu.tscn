@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://by88ekyv2tfhh"]
+
+[ext_resource type="Script" path="res://src/ui/MainMenu.gd" id="1_4sa1d"]
+[ext_resource type="FontFile" uid="uid://cc0jg8jl3txtu" path="res://assets/ui/fonts/monogram-extended.ttf" id="1_lh2ko"]
+[ext_resource type="Texture2D" uid="uid://d2qjca4lpasfy" path="res://assets/ui/Logo.png" id="2_fnuei"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r38vc"]
+font = ExtResource("1_lh2ko")
+font_size = 80
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="Menu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_4sa1d")
+
+[node name="Center" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="Center"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+texture = ExtResource("2_fnuei")
+stretch_mode = 3
+
+[node name="GameName" type="Label" parent="Center"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.25
+text = "Out of Memory"
+label_settings = SubResource("LabelSettings_r38vc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="VBoxContainer" parent="Center"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="StartButton" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="Center/Menu"]
+visible = false
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Exit"

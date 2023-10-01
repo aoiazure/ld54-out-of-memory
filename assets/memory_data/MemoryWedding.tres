@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://scvsnymr568o"]
+
+[ext_resource type="Texture2D" uid="uid://bbl7v21myfr21" path="res://assets/memory_data/Wedding.png" id="1_jpmqw"]
+[ext_resource type="Script" path="res://src/game/MemoryData.gd" id="1_ka2o0"]
+
+[resource]
+script = ExtResource("1_ka2o0")
+memory_icon = ExtResource("1_jpmqw")
+memory_name = "Memory of a Wedding"
+memory_description = "A memory of your wedding. Your first and only. It tastes like roses and salt."
+final_memory = Array[String](["It's a memory of the biggest day of your life.", "Your stomach is a knot, hoping, praying, you do not mess this up.", "It's okay - it doesn't go wrong. It couldn't. What happens after is a blur on the horizon.", "What happens after, no one can ever predict. Could have ever predicted.", "But for now, you watch your partner's eyes. They glimmer with hope and excitement and...", "... genuine love. They love you with a boundless heart and fathomless ambition.", "You could cry. You do cry. It is such a bottomless endless sensation that you can barely understand it.", "It's enough for now. Even if it all disappears someday, it's enough for today.", "It's enough of a memory to hold onto."])

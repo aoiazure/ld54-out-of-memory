@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjlwea63lr8s"]
+
+[ext_resource type="Script" path="res://src/ui/choices/ChoicesMenu.gd" id="1_4wf57"]
+[ext_resource type="PackedScene" uid="uid://dggnelv0x0mnm" path="res://src/ui/choices/Choice.tscn" id="1_xn60d"]
+[ext_resource type="PackedScene" uid="uid://ev35medp218j" path="res://src/ui/dialogue/DialoguePanel.tscn" id="2_hemcf"]
+
+[node name="ChoicesMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4wf57")
+
+[node name="Box" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Box"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Choices" type="HSplitContainer" parent="Box/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 48
+collapsed = true
+dragger_visibility = 1
+
+[node name="ChoiceLeft" parent="Box/MarginContainer/Choices" instance=ExtResource("1_xn60d")]
+layout_mode = 2
+
+[node name="ChoiceRight" parent="Box/MarginContainer/Choices" instance=ExtResource("1_xn60d")]
+layout_mode = 2
+
+[node name="DialoguePanel" parent="Box" instance=ExtResource("2_hemcf")]
+layout_mode = 2
